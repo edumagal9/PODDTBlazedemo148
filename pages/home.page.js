@@ -4,7 +4,7 @@ class HomePage {
     constructor(page) {
         // interno = externo
         this.page = page  // Playwright
-        this.btnhome = '.brand' // class
+        this.btnhome = 'home' // class
     } // fecha constructor
 
     // Act - Ação

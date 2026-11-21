@@ -9,13 +9,13 @@ class LoginPage {
         this.email= '#email'
         this.password = '#password'
         this.rememberme = '[name= "remember"]'
-        this.btnlogin = '.btn.btn-link'
+        this.btnlogin = '.btn.btn-primary'
     }
     // Act - Ação
     async realizar_login (login) {
         await this.page.locator(this.email).fill(email)
         await this.page.locator(this.password).fill(password)
-        await this.page.locator(this.remember).check()
+        await this.page.locator(this.rememberme).check()
         await this.page.locator(this.btnlogin).click()
     } 
 }
