@@ -26,7 +26,7 @@ await homePage.locator(this.btnhome).click()
 
 // Página de Login
 await expect(page).toHaveURL(loginPage.url)
-await expect(page.locator(loginPage.tutulosecao))
+await expect(page.locator(loginPage.titulosecao))
 .toHaveText('Login')
 
 await loginPage.preencher_email(email)
@@ -36,4 +36,4 @@ await loginPage.clicar_para_concluir_login()
 await expect(page.locator(loginPage.mensagem))
 .toHaveText('419 Page Expired')
 
-})
+}})
