@@ -14,7 +14,7 @@ massa.forEach(({
     password,
     mensagem
 }) =>{
-test('Realizar Login PO DDT', async ({page}) => {
+test('Realizar Login PO DDT', async ({page}) => 
 
 // Instanciar os objetos 
 const homePage = new HomePage(page)
@@ -36,4 +36,4 @@ await loginPage.clicar_para_concluir_login()
 await expect(page.locator(loginPage.mensagem))
 .toHaveText('419 Page Expired')
 
-}})
+)})
