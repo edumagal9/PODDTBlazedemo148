@@ -1,9 +1,9 @@
-const {test, expect} = require("@playwright/test");
+import {test, expect} from '@playwright/test';
 
-import {parse} from 'csv-parse/sync'
+import {parse} from 'csv-parse/sync';
 import { readFileSync } from 'node:fs';
-import HomePage from '../pages/home.page'
-import LoginPage from '../pages/login.page'
+import HomePage from '../pages/home.page';
+import LoginPage from '../pages/login.page';
 
 const massa = parse(readFileSync('data/csv/login.csv'), {
     columns: true

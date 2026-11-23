@@ -12,7 +12,7 @@ class LoginPage {
         this.btnlogin = '.btn.btn-primary'
     }
     // Act - Ação
-    async realizar_login (login) {
+    async realizar_login (email, password) {
         await this.page.locator(this.email).fill(email)
         await this.page.locator(this.password).fill(password)
         await this.page.locator(this.rememberme).check()
