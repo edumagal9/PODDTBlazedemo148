@@ -15,4 +15,4 @@ class HomePage {
     // Assert - Validação - // Será feita nos testes
 } // fecha classe
 
-module.exports =  HomePage
+module.exports = {HomePage}
