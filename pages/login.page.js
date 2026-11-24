@@ -19,4 +19,4 @@ class LoginPage {
         await this.page.locator(this.btnlogin).click()
     } 
 }
-module.exports = {LoginPage}
+export default LoginPage

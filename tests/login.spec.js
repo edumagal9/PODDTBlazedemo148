@@ -13,8 +13,8 @@ massa.forEach(({
     email,
     password,
     mensagem
-}) =>{
-test('Realizar Login PO DDT', async ({page}) => 
+}) =>{  
+test(`Realizar Login PO DDT - ${email}`, async ({page}) => {
 
 // Instanciar os objetos 
 const homePage = new HomePage(page)
@@ -22,18 +22,15 @@ const loginPage = new LoginPage(page)
 
 // Página Principal - Home
 await page.goto('https://blazedemo.com/')
-await homePage.locator(this.btnhome).click()
+await page.locator(homePage.btnhome).click()
 
 // Página de Login
 await expect(page).toHaveURL(loginPage.url)
 await expect(page.locator(loginPage.titulosecao))
 .toHaveText('Login')
 
-await loginPage.preencher_email(email)
-await loginPage.preencher_password(password)
-await loginPage.lembrar_de_mim()
-await loginPage.clicar_para_concluir_login()
+await loginPage.realizar_login(email, password)
 await expect(page.locator(loginPage.mensagem))
 .toHaveText('419 Page Expired')
-
-)})
+})
+})
